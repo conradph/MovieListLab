@@ -17,15 +17,7 @@ namespace MovieListLab
                 movies.DisplayCategory();
                 goOn = movies.GoAgain();
             }
-            List<Movie> check = movies.Movies.OrderBy(x => x.Title).ToList();
-            for (int i =0; i < movies.Movies.Count; i++)
-            {
-                Console.WriteLine(movies.Movies[i].Title);
-            }
-            for (int i = 0; i < check.Count; i++)
-            {
-                Console.WriteLine(check[i].Title);
-            }
+            
 
             Console.WriteLine("Goodbye!");
         }

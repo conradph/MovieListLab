@@ -47,11 +47,12 @@ namespace MovieListLab
         public void DisplayCategory()
         {
             DisplayCategories();
-            string category = GetInput("What category are you interested in?");
-            while(true)
+            string category;
+            while (true)
             {
                 try
                 {
+                    category = GetInput("What category are you interested in?");
                     int option = int.Parse(category);
                     category = Categories[option];
                     break;
@@ -63,7 +64,7 @@ namespace MovieListLab
                 }
                 catch (ArgumentOutOfRangeException)
                 {
-                    Console.WriteLine($"Please enter na integer between 0 and {Categories.Count-1}.");
+                    Console.WriteLine($"Please enter an integer between 0 and {Categories.Count-1}.");
                     continue;
                 }
             }
